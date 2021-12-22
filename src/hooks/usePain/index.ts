@@ -26,7 +26,7 @@ export type PainMeta = {
  */
 export interface PainContextType {
   /**
-   * Active brand ID
+   * Active meta
    */
   metaActive: PainMeta;
   /**
