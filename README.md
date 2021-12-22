@@ -34,19 +34,16 @@ yarn add @ricardo-jrm/pain
 ### <b>Usage</b>
 
 ```ts
-import { PainProvider, PainRecord, usePain } from '@ricardo-jrm/pain';
+import { usePain, PainProvider, PainRecord } from '@ricardo-jrm/pain';
 
 // app
-const exampleMetas: PainRecord = {
-  meta1: { name: 'Meta 1' },
-  meta2: { name: 'Meta 2' },
-  meta3: { name: 'Meta 3' },
+const examplePain: PainRecord = {
+  default: { name: 'Default' },
+  pain1: { name: 'pain 1' },
+  pain2: { name: 'pain 2' },
 };
 
-<PainProvider
-  pains={ exampleMetas }
-  painsDefault="meta1"
->
+<PainProvider pain={examplePain} painDefault="default">
   {...}
 </PainProvider>
 

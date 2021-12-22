@@ -20,13 +20,13 @@ export interface PainProviderProps {
    */
   lsid?: string;
   /**
-   * Provided pains
+   * Provided pain record
    */
-  pains: PainRecord;
+  pain: PainRecord;
   /**
    * Default pain ID
    */
-  painsDefault: string;
+  painDefault: string;
 }
 
 /**
@@ -35,30 +35,30 @@ export interface PainProviderProps {
 export const PainProvider = ({
   children,
   lsid,
-  pains,
-  painsDefault,
+  pain,
+  painDefault,
 }: PainProviderProps) => {
   // init active pain
   const [painActiveId, painActiveIdSet] = useLocalState(
     lsid || 'pain',
-    painsDefault,
+    painDefault,
   );
   const painActive = useMemo<PainData>(
-    () => pains[painActiveId],
-    [pains, painActiveId],
+    () => pain[painActiveId],
+    [pain, painActiveId],
   );
 
   // set pain by id
   const painSetById = useCallback<PainContextType['painSetById']>(
     (painId) => {
-      if (pains[painId]) {
+      if (pain[painId]) {
         painActiveIdSet(painId);
       } else {
         // eslint-disable-next-line no-console
         console.warn('pain not found for given id: ', painId);
       }
     },
-    [pains, painActiveIdSet],
+    [pain, painActiveIdSet],
   );
 
   // build ctx

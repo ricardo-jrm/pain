@@ -18,7 +18,7 @@ const examplePain: PainRecord = {
 
 export const decorators = [
   (Story) => (
-    <PainProvider pains={examplePain} painsDefault="default">
+    <PainProvider pain={examplePain} painDefault="default">
       {Story()}
     </PainProvider>
   ),
