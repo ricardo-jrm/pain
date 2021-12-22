@@ -1,9 +1,15 @@
 import { useContext, createContext } from 'react';
 
+/**
+ * Record of Pain
+ */
 export type PainMetas = {
   [x: string]: PainMeta;
 };
 
+/**
+ * Schema of Pain
+ */
 export type PainMeta = {
   name: string;
   legalName?: string;
