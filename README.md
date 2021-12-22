@@ -40,6 +40,7 @@ import { PainProvider, PainMetas, usePain } from '@ricardo-jrm/Pain';
 const exampleMetas: PainMetas = {
   meta1: { name: 'Meta 1' },
   meta2: { name: 'Meta 2' },
+  meta3: { name: 'Meta 3' },
 };
 
 <PainProvider
