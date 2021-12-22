@@ -5,20 +5,20 @@ import { usePain } from '../../index';
  * ExampleComponent
  */
 export const ExampleComponent = ({ text }: ExampleComponentProps) => {
-  const { metaActive, metaSetById } = usePain();
+  const { painActive, painActiveId, painSetById } = usePain();
 
   return (
     <div>
-      <div data-testid="test-component">{`${metaActive.name}: ${text}`}</div>
+      <div data-testid="test-component">{`${painActive.name} (${painActiveId}): ${text}`}</div>
       <div>
-        <button type="button" onClick={() => metaSetById('meta1')}>
-          Meta 1
+        <button type="button" onClick={() => painSetById('pain1')}>
+          Pain 1
         </button>
-        <button type="button" onClick={() => metaSetById('meta2')}>
-          Meta 2
+        <button type="button" onClick={() => painSetById('pain2')}>
+          Pain 2
         </button>
-        <button type="button" onClick={() => metaSetById('default')}>
-          Meta Default
+        <button type="button" onClick={() => painSetById('default')}>
+          Pain Default
         </button>
       </div>
     </div>

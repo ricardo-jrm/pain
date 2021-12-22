@@ -1,16 +1,9 @@
 import { useContext, createContext } from 'react';
 
 /**
- * Record of Pain
- */
-export type PainMetas = {
-  [x: string]: PainMeta;
-};
-
-/**
  * Schema of Pain
  */
-export type PainMeta = {
+export type PainData = {
   name: string;
   legalName?: string;
   trademark?: string;
@@ -22,27 +15,39 @@ export type PainMeta = {
 };
 
 /**
+ * Record of Pain
+ */
+export type PainRecord = {
+  [x: string]: PainData;
+};
+
+/**
  * Context interface
  */
 export interface PainContextType {
   /**
-   * Active meta
+   * Active pain
    */
-  metaActive: PainMeta;
+  painActive: PainData;
   /**
-   * Set meta by ID
+   * Active pain id
    */
-  metaSetById: (metaId: string) => void;
+  painActiveId: string;
+  /**
+   * Set pain by ID
+   */
+  painSetById: (painId: string) => void;
 }
 
 /**
  * Initial value
  */
 const init: PainContextType = {
-  metaActive: {
+  painActive: {
     name: 'Default',
   },
-  metaSetById: () => undefined,
+  painActiveId: 'default',
+  painSetById: () => undefined,
 };
 
 /**

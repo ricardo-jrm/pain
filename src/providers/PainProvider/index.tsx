@@ -1,6 +1,11 @@
 import React, { useCallback, useMemo } from 'react';
 import { useLocalState } from '@ricardo-jrm/use-local-state';
-import { PainContext, PainContextType, PainMetas } from '../../hooks/usePain';
+import {
+  PainContext,
+  PainContextType,
+  PainData,
+  PainRecord,
+} from '../../hooks/usePain';
 
 /**
  * PainProvider interface
@@ -15,13 +20,13 @@ export interface PainProviderProps {
    */
   lsid?: string;
   /**
-   * Provided metas
+   * Provided pains
    */
-  metas: PainMetas;
+  pains: PainRecord;
   /**
-   * Default meta ID
+   * Default pain ID
    */
-  metasDefault: string;
+  painsDefault: string;
 }
 
 /**
@@ -30,36 +35,40 @@ export interface PainProviderProps {
 export const PainProvider = ({
   children,
   lsid,
-  metas,
-  metasDefault,
+  pains,
+  painsDefault,
 }: PainProviderProps) => {
-  // init active meta
-  const [metaActiveId, metaActiveIdSet] = useLocalState(
+  // init active pain
+  const [painActiveId, painActiveIdSet] = useLocalState(
     lsid || 'pain',
-    metasDefault,
+    painsDefault,
   );
-  const metaActive = useMemo(() => metas[metaActiveId], [metas, metaActiveId]);
+  const painActive = useMemo<PainData>(
+    () => pains[painActiveId],
+    [pains, painActiveId],
+  );
 
-  // set meta by id
-  const metaSetById = useCallback<PainContextType['metaSetById']>(
-    (metaId) => {
-      if (metas[metaId]) {
-        metaActiveIdSet(metaId);
+  // set pain by id
+  const painSetById = useCallback<PainContextType['painSetById']>(
+    (painId) => {
+      if (pains[painId]) {
+        painActiveIdSet(painId);
       } else {
         // eslint-disable-next-line no-console
-        console.log('meta not found for given id: ', metaId);
+        console.warn('pain not found for given id: ', painId);
       }
     },
-    [metas, metaActiveIdSet],
+    [pains, painActiveIdSet],
   );
 
   // build ctx
   const ctxPain = useMemo<PainContextType>(
     () => ({
-      metaActive,
-      metaSetById,
+      painActive,
+      painActiveId,
+      painSetById,
     }),
-    [metaActive, metaSetById],
+    [painActive, painActiveId, painSetById],
   );
 
   return (

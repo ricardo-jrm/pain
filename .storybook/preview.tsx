@@ -1,4 +1,4 @@
-import { PainMetas, PainProvider } from '../src';
+import { PainRecord, PainProvider } from '../src';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -10,15 +10,15 @@ export const parameters = {
   },
 };
 
-const tempMetas: PainMetas = {
+const examplePain: PainRecord = {
   default: { name: 'Default' },
-  meta1: { name: 'Meta 1' },
-  meta2: { name: 'Meta 2' },
+  pain1: { name: 'pain 1' },
+  pain2: { name: 'pain 2' },
 };
 
 export const decorators = [
   (Story) => (
-    <PainProvider metas={tempMetas} metasDefault="default">
+    <PainProvider pains={examplePain} painsDefault="default">
       {Story()}
     </PainProvider>
   ),
