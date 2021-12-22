@@ -35,7 +35,7 @@ yarn add @ricardo-jrm/pain
 
 ```ts
 // app
-import { PainProvider, PainMetas, usePain } from '@ricardo-jrm/Pain';
+import { PainProvider, PainMetas, usePain } from '@ricardo-jrm/pain';
 
 const exampleMetas: PainMetas = {
   meta1: { name: 'Meta 1' },
