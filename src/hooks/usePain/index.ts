@@ -6,9 +6,13 @@ import { useContext, createContext } from 'react';
 export type PainData = {
   name: string;
   legalName?: string;
+  title?: string;
+  description?: string;
   trademark?: string;
   domain?: string;
   logo?: string;
+  favicon?: string;
+  image?: string;
   assets?: {
     [x: string]: string;
   };
