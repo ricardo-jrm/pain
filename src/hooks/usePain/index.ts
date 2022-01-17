@@ -13,6 +13,7 @@ export type PainData = {
   logo?: string;
   favicon?: string;
   image?: string;
+  emoji?: string;
   assets?: {
     [x: string]: string;
   };
