@@ -1,21 +1,21 @@
 {
-  "name": "@ricardo-jrm/pain",
+  "name": "@ricardojrmcom/pain",
   "description": "React meta data utility",
-  "version": "0.0.3-development",
+  "version": "0.0.4-development",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/ricardo-jrm/pain.git"
+    "url": "https://github.com/ricardojrmcom/pain.git"
   },
   "author": {
     "name": "Ricardo Mota",
-    "url": "https://github.com/ricardo-jrm"
+    "url": "https://github.com/ricardojrmcom"
   },
-  "homepage": "https://github.com/ricardo-jrm/pain#readme",
+  "homepage": "https://github.com/ricardojrmcom/pain#readme",
   "bugs": {
-    "url": "https://github.com/ricardo-jrm/pain/issues"
+    "url": "https://github.com/ricardojrmcom/pain/issues"
   },
   "license": "MIT",
   "keywords": [
@@ -91,7 +91,7 @@
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
-    "@ricardo-jrm/use-local-state": "^1.0.1",
+    "@ricardojrmcom/use-local-state": "^2.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

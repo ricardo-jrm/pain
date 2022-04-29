@@ -1,17 +1,17 @@
 <div align="center">
 
-# ⚫ `@ricardo-jrm/pain`
+# ⚫ `@ricardojrmcom/pain`
 
 <b>React meta data utility</b>
 
-![build](https://img.shields.io/github/workflow/status/ricardo-jrm/pain/Continuous%20Integration?style=for-the-badge)
-![license](https://img.shields.io/github/license/ricardo-jrm/pain?style=for-the-badge)
+![build](https://img.shields.io/github/workflow/status/ricardojrmcom/pain/Continuous%20Integration?style=for-the-badge)
+![license](https://img.shields.io/github/license/ricardojrmcom/pain?style=for-the-badge)
 
-![author](<https://img.shields.io/badge/Author-Ricardo%20%3Cl1b3r__--%3E%20Mota%20(%40ricardo--jrm)-orange?style=for-the-badge>)
+![author](<https://img.shields.io/badge/Author-Ricardo%20%3Cl1b3r__--%3E%20Mota%20(%40ricardojrmcom)-orange?style=for-the-badge>)
 
-![lang](https://img.shields.io/github/languages/top/ricardo-jrm/pain?style=for-the-badge)
-![version](https://img.shields.io/npm/v/@ricardo-jrm/pain?style=for-the-badge)
-![size](https://img.shields.io/bundlephobia/min/@ricardo-jrm/pain?style=for-the-badge)
+![lang](https://img.shields.io/github/languages/top/ricardojrmcom/pain?style=for-the-badge)
+![version](https://img.shields.io/npm/v/@ricardojrmcom/pain?style=for-the-badge)
+![size](https://img.shields.io/bundlephobia/min/@ricardojrmcom/pain?style=for-the-badge)
 
 </div>
 
@@ -24,9 +24,9 @@
 ### <b>Install</b>
 
 ```ts
-npm install @ricardo-jrm/pain
+npm install @ricardojrmcom/pain
 
-yarn add @ricardo-jrm/pain
+yarn add @ricardojrmcom/pain
 ```
 
 <br />
@@ -34,7 +34,7 @@ yarn add @ricardo-jrm/pain
 ### <b>Usage</b>
 
 ```ts
-import { usePain, PainProvider, PainRecord } from '@ricardo-jrm/pain';
+import { usePain, PainProvider, PainRecord } from '@ricardojrmcom/pain';
 
 // app
 const examplePain: PainRecord = {
@@ -60,8 +60,8 @@ const { painActive, painActiveId, painSetById } = usePain();
 
 ### <b>License</b>
 
-[MIT](https://github.com/ricardo-jrm/pain/blob/main/LICENSE) © Ricardo <l1b3r\_-> Mota ([@ricardo-jrm](https://github.com/ricardo-jrm))
+[MIT](https://github.com/ricardojrmcom/pain/blob/main/LICENSE) © Ricardo <l1b3r\_-> Mota ([@ricardojrmcom](https://github.com/ricardojrmcom))
 
-Bootstrapped with 🟣[@ricardo-jrm/supernova](https://github.com/ricardo-jrm/supernova)
+Bootstrapped with 🟣[@ricardojrmcom/supernova](https://github.com/ricardojrmcom/supernova)
 
 <br />

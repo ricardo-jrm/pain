@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
-import { useLocalState } from '@ricardo-jrm/use-local-state';
+import { useLocalState } from '@ricardojrmcom/use-local-state';
 import {
   PainContext,
   PainContextType,
